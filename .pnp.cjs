@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:12.1.3"],
             ["@testing-library/user-event", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:13.5.0"],
             ["@types/jest", "npm:27.4.0"],
+            ["@types/js-yaml", "npm:4.0.5"],
             ["@types/node", "npm:16.11.25"],
             ["@types/prop-types", "npm:15.7.4"],
             ["@types/react", "npm:17.0.39"],
@@ -52,6 +53,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-testing-library", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:5.0.5"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:27.5.1"],
+            ["js-yaml", "npm:4.1.0"],
             ["lint-staged", "npm:12.3.4"],
             ["luxon", "npm:2.3.0"],
             ["next", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:12.1.0"],
@@ -2137,6 +2139,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/js-yaml", [
+        ["npm:4.0.5", {
+          "packageLocation": "./.yarn/cache/@types-js-yaml-npm-4.0.5-bb64d71397-7dcac8c50f.zip/node_modules/@types/js-yaml/",
+          "packageDependencies": [
+            ["@types/js-yaml", "npm:4.0.5"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/json-schema", [
         ["npm:7.0.9", {
           "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.9-361918cff3-259d0e25f1.zip/node_modules/@types/json-schema/",
@@ -3801,6 +3812,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:12.1.3"],
             ["@testing-library/user-event", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:13.5.0"],
             ["@types/jest", "npm:27.4.0"],
+            ["@types/js-yaml", "npm:4.0.5"],
             ["@types/node", "npm:16.11.25"],
             ["@types/prop-types", "npm:15.7.4"],
             ["@types/react", "npm:17.0.39"],
@@ -3811,6 +3823,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-testing-library", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:5.0.5"],
             ["husky", "npm:7.0.4"],
             ["jest", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:27.5.1"],
+            ["js-yaml", "npm:4.1.0"],
             ["lint-staged", "npm:12.3.4"],
             ["luxon", "npm:2.3.0"],
             ["next", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:12.1.0"],
