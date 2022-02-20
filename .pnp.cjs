@@ -45,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.11.25"],
             ["@types/prop-types", "npm:15.7.4"],
             ["@types/react", "npm:17.0.39"],
+            ["axios", "npm:0.26.0"],
             ["devmoji", "npm:2.3.0"],
             ["eslint", "npm:8.9.0"],
             ["eslint-config-next", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:12.1.0"],
@@ -2805,6 +2806,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["axios", [
+        ["npm:0.26.0", {
+          "packageLocation": "./.yarn/cache/axios-npm-0.26.0-ae9d5291c9-d7a8b898f4.zip/node_modules/axios/",
+          "packageDependencies": [
+            ["axios", "npm:0.26.0"],
+            ["follow-redirects", "virtual:ae9d5291c97ae0cacb5775381cccfce07fa49ffc443f3fdd7488fb1a1655b5d1c7927e5118e33808de5d3fd89b9e27b3eadf3d56f2cf83b8ab953c0679aed818#npm:1.14.9"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["axobject-query", [
         ["npm:2.2.0", {
           "packageLocation": "./.yarn/cache/axobject-query-npm-2.2.0-6553738f52-96b8c7d807.zip/node_modules/axobject-query/",
@@ -3793,6 +3804,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.11.25"],
             ["@types/prop-types", "npm:15.7.4"],
             ["@types/react", "npm:17.0.39"],
+            ["axios", "npm:0.26.0"],
             ["devmoji", "npm:2.3.0"],
             ["eslint", "npm:8.9.0"],
             ["eslint-config-next", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:12.1.0"],
@@ -4632,6 +4644,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/flatted-npm-3.2.5-0ee5a8875f-3c436e9695.zip/node_modules/flatted/",
           "packageDependencies": [
             ["flatted", "npm:3.2.5"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["follow-redirects", [
+        ["npm:1.14.9", {
+          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.14.9-522f191631-f5982e0eb4.zip/node_modules/follow-redirects/",
+          "packageDependencies": [
+            ["follow-redirects", "npm:1.14.9"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:ae9d5291c97ae0cacb5775381cccfce07fa49ffc443f3fdd7488fb1a1655b5d1c7927e5118e33808de5d3fd89b9e27b3eadf3d56f2cf83b8ab953c0679aed818#npm:1.14.9", {
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-0541b7cf28/0/cache/follow-redirects-npm-1.14.9-522f191631-f5982e0eb4.zip/node_modules/follow-redirects/",
+          "packageDependencies": [
+            ["follow-redirects", "virtual:ae9d5291c97ae0cacb5775381cccfce07fa49ffc443f3fdd7488fb1a1655b5d1c7927e5118e33808de5d3fd89b9e27b3eadf3d56f2cf83b8ab953c0679aed818#npm:1.14.9"],
+            ["@types/debug", null],
+            ["debug", null]
+          ],
+          "packagePeers": [
+            "@types/debug",
+            "debug"
           ],
           "linkType": "HARD",
         }]
