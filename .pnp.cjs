@@ -42,7 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:12.1.3"],
             ["@testing-library/user-event", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:13.5.0"],
             ["@types/jest", "npm:27.4.0"],
-            ["@types/node", "npm:17.0.18"],
+            ["@types/node", "npm:16.11.25"],
             ["@types/prop-types", "npm:15.7.4"],
             ["@types/react", "npm:17.0.39"],
             ["devmoji", "npm:2.3.0"],
@@ -2164,6 +2164,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/node", [
+        ["npm:16.11.25", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.25-78cf927571-0b6e25a813.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:16.11.25"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:17.0.18", {
           "packageLocation": "./.yarn/cache/@types-node-npm-17.0.18-a816928b08-6c4edfc2b3.zip/node_modules/@types/node/",
           "packageDependencies": [
@@ -3783,7 +3790,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/react", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:12.1.3"],
             ["@testing-library/user-event", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:13.5.0"],
             ["@types/jest", "npm:27.4.0"],
-            ["@types/node", "npm:17.0.18"],
+            ["@types/node", "npm:16.11.25"],
             ["@types/prop-types", "npm:15.7.4"],
             ["@types/react", "npm:17.0.39"],
             ["devmoji", "npm:2.3.0"],
