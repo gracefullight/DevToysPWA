@@ -15,7 +15,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link href='https://cdn.jsdelivr.net/npm/css.gg/icons/all.css' rel='stylesheet' />
           {CssBaseline.flush()}
         </Head>
         <body>
