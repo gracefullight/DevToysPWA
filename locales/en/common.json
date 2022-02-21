@@ -1,0 +1,11 @@
+{
+  "home": "Home",
+  "converter_one": "Converter",
+  "converter_other": "Converters",
+  "encoders": "Encoders",
+  "decoders": "Decoders",
+  "formatters": "Formatters",
+  "generators": "Generators",
+  "text": "Text",
+  "graphic": "Graphic"
+}

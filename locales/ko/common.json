@@ -1,0 +1,11 @@
+{
+  "home": "홈",
+  "converter_one": "컨버터",
+  "converter_other": "컨버터",
+  "encoders": "인코더",
+  "decoders": "디코더",
+  "formatters": "포매터",
+  "generators": "제네레이터",
+  "text": "텍스트",
+  "graphic": "그래픽"
+}
