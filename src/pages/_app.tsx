@@ -2,6 +2,7 @@ import { NextUIProvider } from '@nextui-org/react';
 import { RecoilRoot } from 'recoil';
 import type { AppProps } from 'next/app';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { appWithTranslation } from 'next-i18next';
 
 import { darkTheme } from '../theme';
 
@@ -23,4 +24,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

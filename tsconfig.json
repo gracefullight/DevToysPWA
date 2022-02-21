@@ -21,6 +21,6 @@
       "@/layouts/*": ["src/layouts/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "i18n/index.js"],
   "exclude": ["node_modules"]
 }
