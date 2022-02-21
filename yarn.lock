@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 5
+  version: 6
   cacheKey: 8
 
 "@ampproject/remapping@npm:^2.1.0":
@@ -2771,7 +2771,7 @@ __metadata:
     luxon: ^2.3.0
     next: ^12.1.0
     next-i18next: ^10.3.0
-    next-themes: ^0.1.0
+    next-themes: ^0.1.1
     prop-types: ^15.8.1
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -5431,14 +5431,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-themes@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "next-themes@npm:0.1.0"
+"next-themes@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "next-themes@npm:0.1.1"
   peerDependencies:
     next: ">=11.1.1"
     react: "*"
     react-dom: "*"
-  checksum: 71a74aed219765fd04d09d003d0c5ccb4d1c4fa9907f34eca19c26467ac984aef944e80abc06c0394fe6bfb790d5b04b5acb45680c2f166b3e1d23c0c8c71b71
+  checksum: 226f6af92f3ccccd23c21cd0605aee4fef3482fb8442957a8bae220051af587b63b9fa0b1c8c1c859a7f60b7c8380ebcec98adb3575c903611251917846215e4
   languageName: node
   linkType: hard
 
@@ -7146,11 +7146,11 @@ __metadata:
 
 "typescript@patch:typescript@4.5.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
   version: 4.5.5
-  resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"
+  resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: c05c318d79c690f101d7ffb34cd6c7d6bbd884d3af9cefe7749ad0cd6be43c7082f098280982ca945dcba23fde34a08fed9602bb26540936baf8c0520727d3ba
+  checksum: 858c61fa63f7274ca4aaaffeced854d550bf416cff6e558c4884041b3311fb662f476f167cf5c9f8680c607239797e26a2ee0bcc6467fbc05bfcb218e1c6c671
   languageName: node
   linkType: hard
 
