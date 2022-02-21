@@ -33,6 +33,7 @@ const Home: NextPage = () => {
           <Container direction="row" css={{ paddingTop: '5px;' }}>
             <Input
               bordered
+              animated={false}
               size="sm"
               placeholder="Type to search for tools..."
               color="default"
