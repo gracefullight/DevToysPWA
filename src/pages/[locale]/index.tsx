@@ -11,7 +11,6 @@ import {
 } from '@nextui-org/react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import { Children } from 'react';
 import {
   VscHome,
   VscArrowSwap,
@@ -33,7 +32,10 @@ const Home: NextPage = () => {
     <Container fluid gap={1}>
       <Row>
         <Col span={4}>
-          <Container direction="row" css={{ paddingTop: '5px;' }}>
+          <Container
+            direction="row"
+            css={{ position: 'fixed', height: '100%', paddingTop: '5px' }}
+          >
             <Input
               bordered
               animated={false}
@@ -67,7 +69,14 @@ const Home: NextPage = () => {
         </Col>
         <Col>
           <Container as="main">
-            <Row>
+            <Row
+              css={{
+                position: 'sticky',
+                top: 0,
+                zIndex: 1,
+                background: '$headerBackground',
+              }}
+            >
               <Text h3>{t('home')}</Text>
             </Row>
             <Spacer />
@@ -80,9 +89,7 @@ const Home: NextPage = () => {
                         <Card.Header
                           css={{ position: 'absolute', zIndex: 1, top: 5 }}
                         >
-                          <Text h5>
-                            {t(route.title)}
-                          </Text>
+                          <Text h5>{t(route.title)}</Text>
                         </Card.Header>
                         <Card.Body css={{ p: 0 }}>
                           <Card.Image
