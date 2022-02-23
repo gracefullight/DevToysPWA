@@ -11,6 +11,7 @@ import {
 } from '@nextui-org/react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { Children } from 'react';
 import {
   VscHome,
   VscArrowSwap,
@@ -22,9 +23,11 @@ import {
 } from 'react-icons/vsc';
 
 import { i18n } from '../../../next-i18next.config';
+import { getRoutes } from '../../routes';
 
 const Home: NextPage = () => {
   const { t } = useTranslation('common');
+  const routes = getRoutes();
 
   return (
     <Container fluid gap={1}>
@@ -70,27 +73,33 @@ const Home: NextPage = () => {
             <Spacer />
             <Row>
               <Grid.Container gap={1}>
-                <Grid xs={6} sm={3}>
-                  <Card hoverable cover>
-                    <Card.Header
-                      css={{ position: 'absolute', zIndex: 1, top: 5 }}
-                    >
-                      <Text h5>JSON ↔ YAML {t('converter', { count: 1 })}</Text>
-                    </Card.Header>
-                    <Card.Body css={{ p: 0 }}>
-                      <Card.Image
-                        src="https://picsum.photos/200/300"
-                        width="100%"
-                        height={200}
-                      />
-                    </Card.Body>
-                    <Card.Footer>
-                      <Text small>
-                        Convert Json data to Yaml and vice versa
-                      </Text>
-                    </Card.Footer>
-                  </Card>
-                </Grid>
+                {routes.map((route, i) => {
+                  return (
+                    <Grid xs={6} sm={3} key={i}>
+                      <Card hoverable cover>
+                        <Card.Header
+                          css={{ position: 'absolute', zIndex: 1, top: 5 }}
+                        >
+                          <Text h5>
+                            {t(route.title)}
+                          </Text>
+                        </Card.Header>
+                        <Card.Body css={{ p: 0 }}>
+                          <Card.Image
+                            src="https://picsum.photos/200/300"
+                            width="100%"
+                            height={200}
+                          />
+                        </Card.Body>
+                        <Card.Footer>
+                          <Text small>
+                            {t(`${route.shortTitle}.description`)}
+                          </Text>
+                        </Card.Footer>
+                      </Card>
+                    </Grid>
+                  );
+                })}
               </Grid.Container>
             </Row>
           </Container>

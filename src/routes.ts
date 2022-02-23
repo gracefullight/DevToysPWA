@@ -25,7 +25,7 @@ import {
   VscSymbolMisc,
 } from 'react-icons/vsc';
 
-export const routersOrder = [
+export const ROUTES_ORDER = [
   'converters',
   'encoders',
   'formatters',
@@ -35,11 +35,11 @@ export const routersOrder = [
   'encryptors',
 ] as const;
 
-export const routes = {
+export const ROUTES = {
   converters: [
     {
-      title: 'home',
-      shortTitle: 'home',
+      title: 'jsonToYaml',
+      shortTitle: 'jsonToYaml',
       path: '/converters/json-to-yaml',
       icon: VscNote,
     },
@@ -201,3 +201,7 @@ export const routes = {
     },
   ],
 } as const;
+
+export const getRoutes = () => {
+  return ROUTES_ORDER.map((key) => ROUTES[key]).flat();
+};
