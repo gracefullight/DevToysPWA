@@ -11,15 +11,7 @@ import {
 } from '@nextui-org/react';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
-import {
-  VscHome,
-  VscArrowSwap,
-  VscFileBinary,
-  VscListSelection,
-  VscWand,
-  VscTextSize,
-  VscSymbolMisc,
-} from 'react-icons/vsc';
+import BoxIcon from '@/components/BoxIcon';
 
 import { i18n } from '../../../next-i18next.config';
 import { getRoutes } from '../../routes';
@@ -40,30 +32,32 @@ const Home: NextPage = () => {
               bordered
               animated={false}
               size="sm"
-              placeholder="Type to search for tools..."
+              placeholder={t('typeToSearch')}
               color="default"
             />
             <Spacer />
             <Text>
-              <VscHome /> {t('home')}
+              <BoxIcon name="home" /> {t('home')}
+            </Text>
+            <Spacer y={0.2} />
+            <Text>
+              <BoxIcon name="transfer-alt" /> {t('converter', { count: 0 })}
             </Text>
             <Text>
-              <VscArrowSwap /> {t('converter', { count: 0 })}
+              <BoxIcon name="dna" /> {t('encoders')} / {t('decoders')}
             </Text>
             <Text>
-              <VscFileBinary /> {t('encoders')} / {t('decoders')}
+              <BoxIcon name="align-left" /> {t('formatters')}
             </Text>
             <Text>
-              <VscListSelection /> {t('formatters')}
+              <BoxIcon name="magic-wand" type="solid" /> {t('generators')}
             </Text>
             <Text>
-              <VscWand /> {t('generators')}
+              <BoxIcon name="text" />
+              {t('text')}
             </Text>
             <Text>
-              <VscTextSize /> {t('text')}
-            </Text>
-            <Text>
-              <VscSymbolMisc /> {t('graphic')}
+              <BoxIcon name="images" /> {t('graphic')}
             </Text>
           </Container>
         </Col>
@@ -97,6 +91,7 @@ const Home: NextPage = () => {
                             width="100%"
                             height={200}
                           />
+                          {/* <Avatar squared /> */}
                         </Card.Body>
                         <Card.Footer>
                           <Text small>

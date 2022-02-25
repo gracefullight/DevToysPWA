@@ -1420,13 +1420,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*, @types/jest@npm:^27.4.0":
+"@types/jest@npm:*":
   version: 27.4.0
   resolution: "@types/jest@npm:27.4.0"
   dependencies:
     jest-diff: ^27.0.0
     pretty-format: ^27.0.0
   checksum: d2350267f954f9a2e4a15e5f02fbf19a77abfb9fd9e57a954de1fb0e9a0d3d5f8d3646ac7d9c42aeb4b4d828d2e70624ec149c85bb50a48634a54eed8429e1f8
+  languageName: node
+  linkType: hard
+
+"@types/jest@npm:^27.4.1":
+  version: 27.4.1
+  resolution: "@types/jest@npm:27.4.1"
+  dependencies:
+    jest-matcher-utils: ^27.0.0
+    pretty-format: ^27.0.0
+  checksum: 5184f3eef4832d01ee8f59bed15eec45ccc8e29c724a5e6ce37bf74396b37bdf04f557000f45ba4fc38ae6075cf9cfcce3d7a75abc981023c61ceb27230a93e4
   languageName: node
   linkType: hard
 
@@ -1465,10 +1475,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.11.25":
-  version: 16.11.25
-  resolution: "@types/node@npm:16.11.25"
-  checksum: 0b6e25a81364be89256ad1a36341e27b387e646d3186e270108a8bb7b6ecdfdf5ae037aa1c75a5117b8a7509c80093b75431cd5cfcfbc4d553b52e7db2ca272e
+"@types/node@npm:^16.11.26":
+  version: 16.11.26
+  resolution: "@types/node@npm:16.11.26"
+  checksum: 57757caaba3f0d95de82198cb276a1002c49b710108c932a1d02d7c91ff2fa57cfe2dd19fde60853b6dd90b0964b3cf35557981d2628e20aed6a909057aedfe6
   languageName: node
   linkType: hard
 
@@ -2754,12 +2764,13 @@ __metadata:
     "@testing-library/jest-dom": ^5.16.2
     "@testing-library/react": ^12.1.3
     "@testing-library/user-event": ^13.5.0
-    "@types/jest": ^27.4.0
+    "@types/jest": ^27.4.1
     "@types/js-yaml": ^4.0.5
-    "@types/node": ^16.11.25
+    "@types/node": ^16.11.26
     "@types/prop-types": ^15.7.4
     "@types/react": ^17.0.39
     axios: ^0.26.0
+    clsx: ^1.1.1
     devmoji: ^2.3.0
     eslint: 8.9.0
     eslint-config-next: 12.1.0
@@ -2768,9 +2779,9 @@ __metadata:
     jest: ^27.5.1
     js-yaml: ^4.1.0
     lint-staged: ^12.3.4
-    luxon: ^2.3.0
+    luxon: ^2.3.1
     next: ^12.1.0
-    next-i18next: ^10.3.0
+    next-i18next: ^10.4.0
     next-themes: ^0.1.1
     prop-types: ^15.8.1
     react: ^17.0.2
@@ -4505,7 +4516,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-matcher-utils@npm:^27.5.1":
+"jest-matcher-utils@npm:^27.0.0, jest-matcher-utils@npm:^27.5.1":
   version: 27.5.1
   resolution: "jest-matcher-utils@npm:27.5.1"
   dependencies:
@@ -5111,10 +5122,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "luxon@npm:2.3.0"
-  checksum: 3d00e1b812a31082cf0d97e844d7354c93891fbd14795756f396ee5656387e21d2c862edb841516114eb391f8314a6cf3848799acc6d59cf9560c88c909b91f0
+"luxon@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "luxon@npm:2.3.1"
+  checksum: ce5eec873a0172a0956618531e28010e8d8319a8b3a836b893d0f92239413a1fc5f77841ca24988e27bd61e8b2748e160e9dfcb13e92d7f031c1e31ad1c8ae91
   languageName: node
   linkType: hard
 
@@ -5413,9 +5424,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-i18next@npm:^10.3.0":
-  version: 10.3.0
-  resolution: "next-i18next@npm:10.3.0"
+"next-i18next@npm:^10.4.0":
+  version: 10.4.0
+  resolution: "next-i18next@npm:10.4.0"
   dependencies:
     "@babel/runtime": ^7.13.17
     "@types/hoist-non-react-statics": ^3.3.1
@@ -5427,7 +5438,7 @@ __metadata:
   peerDependencies:
     next: ">= 10.0.0"
     react: ">= 16.8.0"
-  checksum: 3ecb80d28c3f9c845e4c5c6315c1c59cb7aa169bb4e8bd7ed9d89b7afa9c6c9e614bec02bb092851217b2745ade105666f8d1d4f807f728ed1eaf8be75db5094
+  checksum: 49176ba4b1d143340940e53e110c9ebe6d1edee8bfa200abc6fb47026a7ffe6ec9d6ba63e544e3669de4d157b7c0a97cc3efcf59958454414acb9e340b60e6a3
   languageName: node
   linkType: hard
 

@@ -15,6 +15,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet' />
           {CssBaseline.flush()}
         </Head>
         <body>
