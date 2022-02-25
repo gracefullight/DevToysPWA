@@ -3,6 +3,7 @@
     "arcanis.vscode-zipfs",
     "dbaeumer.vscode-eslint",
     "ms-vscode.vscode-typescript-next",
-    "pflannery.vscode-versionlens"
+    "pflannery.vscode-versionlens",
+    "github.vscode-pull-request-github"
   ]
 }
