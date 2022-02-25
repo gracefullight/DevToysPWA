@@ -1,5 +1,9 @@
 # DevToysPWA
 
+![node-lts](https://img.shields.io/badge/node-16-bluegreen)
+
+> The duplicate version of [DevToys](https://devtoys.app), for Web.
+
 ## TODO
 
 - global
