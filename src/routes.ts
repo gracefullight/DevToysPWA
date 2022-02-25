@@ -202,6 +202,7 @@ export const ROUTES = {
   ],
 } as const;
 
-export const getRoutes = () => {
+export const getStaticRoutes = () => {
+  console.log('😡 caluculate static routes');
   return ROUTES_ORDER.map((key) => ROUTES[key]).flat();
 };

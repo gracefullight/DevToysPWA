@@ -18,7 +18,8 @@
     "paths": {
       "@/components/*": ["src/components/*"],
       "@/pages/*": ["src/pages/*"],
-      "@/layouts/*": ["src/layouts/*"]
+      "@/layouts/*": ["src/layouts/*"],
+      "@/types": ["src/types"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "i18n/index.js"],

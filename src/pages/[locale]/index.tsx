@@ -1,4 +1,5 @@
 import type { GetStaticPropsContext, NextPage } from 'next';
+import { useRouter } from 'next/router';
 import {
   Container,
   Text,
@@ -12,13 +13,18 @@ import {
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import BoxIcon from '@/components/BoxIcon';
+import type { I18nProps } from '@/types';
 
 import { i18n } from '../../../next-i18next.config';
-import { getRoutes } from '../../routes';
+import { getStaticRoutes } from '../../routes';
 
-const Home: NextPage = () => {
+interface HomeProps extends I18nProps {}
+
+const Home: NextPage<HomeProps> = (props) => {
+  const router = useRouter();
   const { t } = useTranslation('common');
-  const routes = getRoutes();
+  const routes = getStaticRoutes();
+  const lang = props._nextI18Next.initialLocale;
 
   return (
     <Container fluid gap={1}>
@@ -79,9 +85,16 @@ const Home: NextPage = () => {
                 {routes.map((route, i) => {
                   return (
                     <Grid xs={6} sm={3} key={i}>
-                      <Card hoverable cover>
+                      <Card
+                        hoverable
+                        cover
+                        onClick={() => router.push(`${lang}${route.path}`)}
+                        css={{
+                          cursor: 'pointer',
+                        }}
+                      >
                         <Card.Header
-                          css={{ position: 'absolute', zIndex: 1, top: 5 }}
+                          css={{ position: 'absolute', zIndex: 1, top: 5, left: 1 }}
                         >
                           <Text h5>{t(route.title)}</Text>
                         </Card.Header>
