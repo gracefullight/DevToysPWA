@@ -14,12 +14,16 @@ class MyDocument extends Document {
   }
 
   render() {
-    const currentLocale = this.props.__NEXT_DATA__.query.locale as string || i18n.defaultLocale
+    const currentLocale =
+      (this.props.__NEXT_DATA__.query.locale as string) || i18n.defaultLocale;
 
     return (
       <Html lang={currentLocale}>
         <Head>
-          <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet' />
+          <link
+            href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+            rel="stylesheet"
+          />
           {CssBaseline.flush()}
         </Head>
         <body>
