@@ -7,5 +7,6 @@
   "formatters": "Formatters",
   "generators": "Generators",
   "text": "Text",
-  "graphic": "Graphic"
+  "graphic": "Graphic",
+  "typeToSearch": "Type to search for tools..."
 }
