@@ -1,4 +1,4 @@
-import type { GetStaticPropsContext, NextPage } from 'next';
+import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import {
   Container,
@@ -10,12 +10,11 @@ import {
   Grid,
   Card,
 } from '@nextui-org/react';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import BoxIcon from '@/components/BoxIcon';
+import { getStaticPaths, makeStaticProps } from '@/libs/getStatic';
 import type { I18nProps } from '@/types';
 
-import { i18n } from '../../../next-i18next.config';
 import { getStaticRoutes } from '../../routes';
 
 interface HomeProps extends I18nProps {}
@@ -94,7 +93,12 @@ const Home: NextPage<HomeProps> = (props) => {
                         }}
                       >
                         <Card.Header
-                          css={{ position: 'absolute', zIndex: 1, top: 5, left: 1 }}
+                          css={{
+                            position: 'absolute',
+                            zIndex: 1,
+                            top: 5,
+                            left: 1,
+                          }}
                         >
                           <Text h5>{t(route.title)}</Text>
                         </Card.Header>
@@ -124,20 +128,7 @@ const Home: NextPage<HomeProps> = (props) => {
   );
 };
 
-export async function getStaticPaths() {
-  return {
-    paths: i18n.locales.map((locale) => ({ params: { locale } })),
-    fallback: false,
-  };
-}
-
-export async function getStaticProps(context: GetStaticPropsContext) {
-  const locale = context.params?.locale || i18n.defaultLocale;
-  return {
-    props: {
-      ...(await serverSideTranslations(locale as string, ['common'])),
-    },
-  };
-}
+const getStaticProps = makeStaticProps(['common']);
+export { getStaticPaths, getStaticProps };
 
 export default Home;
