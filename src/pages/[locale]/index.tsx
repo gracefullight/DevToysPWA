@@ -81,7 +81,7 @@ const Home: NextPage<HomeProps> = (props) => {
             </Row>
           </Container>
         </Col>
-        <Col id="main" css={{ ml: sideBarWidth }}>
+        <Col id="main" css={{ ml: sideBarWidth, flexGrow: 1 }}>
           <Container>
             <Row
               css={{
