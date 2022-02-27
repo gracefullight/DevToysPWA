@@ -41,7 +41,7 @@ const Home: NextPage<HomeProps> = (props) => {
           }}
         >
           <Container
-            css={{ display: 'flex', height: '100%' }}
+            css={{ display: 'flex', height: 'inherit' }}
           >
             <Row css={{ flexDirection: 'column' }}>
               <Input
