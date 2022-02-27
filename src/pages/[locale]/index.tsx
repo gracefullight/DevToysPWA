@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { default as NextLink } from 'next/link';
 import { useRouter } from 'next/router';
 import {
   Container,
@@ -11,6 +12,7 @@ import {
   Card,
   Collapse,
   useTheme,
+  Link,
 } from '@nextui-org/react';
 import { useTranslation } from 'next-i18next';
 import { map } from 'lodash';
@@ -83,9 +85,21 @@ const Home: NextPage<HomeProps> = (props) => {
                     >
                       {route.children.map((child) => {
                         return (
-                          <Text size="$xs" key={child.path}>
-                            {t(child.shortTitle)}
-                          </Text>
+                          <NextLink
+                            key={child.path}
+                            href={`${lang}${child.path}`}
+                          >
+                            <Text css={{ pt: 0.5, pl: '$xs', cursor: 'pointer' }}>
+                              <Link color="text">
+                                <BoxIcon
+                                  name={child.icon.name}
+                                  type={child.icon?.type}
+                                  style={{ marginRight: theme?.space.xs.value}}
+                                />{' '}
+                                {t(child.shortTitle)}
+                              </Link>
+                            </Text>
+                          </NextLink>
                         );
                       })}
                     </Collapse>
