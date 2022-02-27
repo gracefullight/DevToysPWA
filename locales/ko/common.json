@@ -1,7 +1,6 @@
 {
   "home": "홈",
-  "converter_one": "컨버터",
-  "converter_other": "컨버터",
+  "converters": "컨버터",
   "encoders": "인코더",
   "decoders": "디코더",
   "formatters": "포매터",

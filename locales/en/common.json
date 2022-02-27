@@ -1,7 +1,6 @@
 {
   "home": "Home",
-  "converter_one": "Converter",
-  "converter_other": "Converters",
+  "converters": "Converters",
   "encoders": "Encoders",
   "decoders": "Decoders",
   "formatters": "Formatters",
