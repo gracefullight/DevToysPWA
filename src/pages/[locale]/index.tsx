@@ -89,12 +89,14 @@ const Home: NextPage<HomeProps> = (props) => {
                             key={child.path}
                             href={`${lang}${child.path}`}
                           >
-                            <Text css={{ pt: 0.5, pl: '$xs', cursor: 'pointer' }}>
+                            <Text
+                              css={{ pt: 0.5, pl: '$xs', cursor: 'pointer' }}
+                            >
                               <Link color="text">
                                 <BoxIcon
                                   name={child.icon.name}
                                   type={child.icon?.type}
-                                  style={{ marginRight: theme?.space.xs.value}}
+                                  style={{ marginRight: theme?.space.xs.value }}
                                 />{' '}
                                 {t(child.shortTitle)}
                               </Link>
