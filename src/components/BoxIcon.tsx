@@ -1,4 +1,4 @@
-import react from 'react';
+import type { DetailsHTMLAttributes } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
@@ -30,7 +30,7 @@ const BOXICON_OPTIONS = {
   TYPE: ['regular', 'solid', 'logo'],
 } as const;
 
-export interface BoxIconProps {
+export interface IconProps {
   name: string;
   size?: typeof BOXICON_OPTIONS.SIZE[number];
   rotate?: typeof BOXICON_OPTIONS.DEGREE[number];
@@ -40,6 +40,10 @@ export interface BoxIconProps {
   animation?: typeof BOXICON_OPTIONS.ANIMATION[number];
   type?: typeof BOXICON_OPTIONS.TYPE[number];
 }
+
+type NativeAttrs = Omit<DetailsHTMLAttributes<unknown>, keyof IconProps>;
+
+export type BoxIconProps = IconProps & NativeAttrs;
 
 const BoxIcon = (props: BoxIconProps) => {
   const {
@@ -51,6 +55,7 @@ const BoxIcon = (props: BoxIconProps) => {
     border,
     animation,
     type = 'regular',
+    ...rest
   } = props;
 
   const typeAbbr = type === 'regular' ? '' : type.charAt(0);
@@ -66,7 +71,7 @@ const BoxIcon = (props: BoxIconProps) => {
     animation && `bx-${animation}`,
   ]);
 
-  return <i className={className}></i>;
+  return <i className={className} {...rest}></i>;
 };
 
 BoxIcon.propTypes = {

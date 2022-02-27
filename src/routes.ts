@@ -1,4 +1,4 @@
-import { BoxIconProps } from "./components/BoxIcon";
+import { BoxIconProps } from './components/BoxIcon';
 
 export const ROUTES_ORDER = [
   'converters',
@@ -11,237 +11,283 @@ export const ROUTES_ORDER = [
 ] as const;
 
 export type RouteGroup = typeof ROUTES_ORDER[number];
+export type RouteIcon = Pick<BoxIconProps, 'name' | 'type'>;
 export interface Route {
   title: string;
   shortTitle: string;
   path: string;
-  icon: Pick<BoxIconProps, 'name' | 'type'>;
+  icon: RouteIcon;
 }
-export type Routes = Record<RouteGroup, Route[]>;
+export interface RouteObject {
+  key: string;
+  icon: RouteIcon;
+  children: Route[];
+}
+
+export type Routes = Record<RouteGroup, RouteObject>;
 
 export const ROUTES: Routes = {
-  converters: [
-    {
-      title: 'jsonToYaml',
-      shortTitle: 'jsonToYaml',
-      path: '/converters/json-to-yaml',
-      icon: {
-        name: 'transfer-alt',
-      },
+  converters: {
+    key: 'converters',
+    icon: {
+      name: 'sync',
     },
-    {
-      title: 'numberBase',
-      shortTitle: 'numberBase',
-      path: '/converters/number-base',
-      icon: {
-        name: 'math',
+    children: [
+      {
+        title: 'jsonToYaml',
+        shortTitle: 'jsonToYaml',
+        path: '/converters/json-to-yaml',
+        icon: {
+          name: 'transfer-alt',
+        },
       },
-    },
-    {
-      title: 'Date',
-      shortTitle: 'Date',
-      path: '/converters/Date',
-      icon: {
-        name: 'calendar',
+      {
+        title: 'numberBase',
+        shortTitle: 'numberBase',
+        path: '/converters/number-base',
+        icon: {
+          name: 'math',
+        },
       },
-    },
-  ],
-  encoders: [
-    {
-      title: 'html',
-      shortTitle: 'html',
-      path: '/encoders/html',
-      icon: {
-        name: 'code-alt',
+      {
+        title: 'Date',
+        shortTitle: 'Date',
+        path: '/converters/Date',
+        icon: {
+          name: 'calendar',
+        },
       },
+    ],
+  },
+  encoders: {
+    key: 'encoders',
+    icon: {
+      name: 'dna',
     },
-    {
-      title: 'url',
-      shortTitle: 'url',
-      path: '/encoders/url',
-      icon: {
-        name: 'link',
+    children: [
+      {
+        title: 'html',
+        shortTitle: 'html',
+        path: '/encoders/html',
+        icon: {
+          name: 'code-alt',
+        },
       },
-    },
-    {
-      title: 'base64',
-      shortTitle: 'base64',
-      path: '/encoders/base64',
-      icon: {
-        name: 'package',
+      {
+        title: 'url',
+        shortTitle: 'url',
+        path: '/encoders/url',
+        icon: {
+          name: 'link',
+        },
       },
-    },
-    {
-      title: 'gzip',
-      shortTitle: 'gzip',
-      path: '/encoders/gzip',
-      icon: {
-        name: 'file-archive',
-        type: 'solid',
+      {
+        title: 'base64',
+        shortTitle: 'base64',
+        path: '/encoders/base64',
+        icon: {
+          name: 'package',
+        },
       },
-    },
-    {
-      title: 'jwt',
-      shortTitle: 'jwt',
-      path: '/encoders/jwt',
-      icon: {
-        name: 'code-curly',
+      {
+        title: 'gzip',
+        shortTitle: 'gzip',
+        path: '/encoders/gzip',
+        icon: {
+          name: 'file-archive',
+          type: 'solid',
+        },
       },
-    },
-  ],
-  formatters: [
-    {
-      title: 'json',
-      shortTitle: 'json',
-      path: '/formatters/json',
-      icon: {
-        name: 'file-json',
-        type: 'solid',
+      {
+        title: 'jwt',
+        shortTitle: 'jwt',
+        path: '/encoders/jwt',
+        icon: {
+          name: 'code-curly',
+        },
       },
+    ],
+  },
+  formatters: {
+    key: 'formatters',
+    icon: {
+      name: 'align-left',
     },
-    {
-      title: 'sql',
-      shortTitle: 'sql',
-      path: '/formatters/sql',
-      icon: {
-        name: 'data',
+    children: [
+      {
+        title: 'json',
+        shortTitle: 'json',
+        path: '/formatters/json',
+        icon: {
+          name: 'file-json',
+          type: 'solid',
+        },
       },
-    },
-    {
-      title: 'xml',
-      shortTitle: 'xml',
-      path: '/formatters/xml',
-      icon: {
-        name: 'code-alt',
+      {
+        title: 'sql',
+        shortTitle: 'sql',
+        path: '/formatters/sql',
+        icon: {
+          name: 'data',
+        },
       },
-    },
-  ],
-  generators: [
-    {
-      title: 'hash',
-      shortTitle: 'hash',
-      path: '/generators/hash',
-      icon: {
-        name: 'hash',
+      {
+        title: 'xml',
+        shortTitle: 'xml',
+        path: '/formatters/xml',
+        icon: {
+          name: 'code-alt',
+        },
       },
+    ],
+  },
+  generators: {
+    key: 'generators',
+    icon: {
+      name: 'magic-wand',
+      type: 'solid',
     },
-    {
-      title: 'uuid',
-      shortTitle: 'uuid',
-      path: '/generators/uuid',
-      icon: {
-        name: 'id-card',
+    children: [
+      {
+        title: 'hash',
+        shortTitle: 'hash',
+        path: '/generators/hash',
+        icon: {
+          name: 'hash',
+        },
       },
-    },
-    {
-      title: 'lorem',
-      shortTitle: 'lorem',
-      path: '/generators/lorem',
-      icon: {
-        name: 'paragraph',
+      {
+        title: 'uuid',
+        shortTitle: 'uuid',
+        path: '/generators/uuid',
+        icon: {
+          name: 'id-card',
+        },
       },
-    },
-    {
-      title: 'checksum',
-      shortTitle: 'checksum',
-      path: '/generators/checksum',
-      icon: {
-        name: 'file-export',
-        type: 'solid',
+      {
+        title: 'lorem',
+        shortTitle: 'lorem',
+        path: '/generators/lorem',
+        icon: {
+          name: 'paragraph',
+        },
       },
-    },
-  ],
-  encryptors: [
-    {
-      title: 'aes',
-      shortTitle: 'aes',
-      path: '/encryptors/aes',
-      icon: {
-        name: 'lock',
+      {
+        title: 'checksum',
+        shortTitle: 'checksum',
+        path: '/generators/checksum',
+        icon: {
+          name: 'file-export',
+          type: 'solid',
+        },
       },
+    ],
+  },
+  encryptors: {
+    key: 'encryptors',
+    icon: {
+      name: 'key',
     },
-    {
-      title: 'des',
-      shortTitle: 'des',
-      path: '/encryptors/des',
-      icon: {
-        name: 'lock-open',
+    children: [
+      {
+        title: 'aes',
+        shortTitle: 'aes',
+        path: '/encryptors/aes',
+        icon: {
+          name: 'lock',
+        },
       },
-    },
-  ],
-  text: [
-    {
-      title: 'inspector',
-      shortTitle: 'inspector',
-      path: '/text/inspector',
-      icon: {
-        name: 'font',
+      {
+        title: 'des',
+        shortTitle: 'des',
+        path: '/encryptors/des',
+        icon: {
+          name: 'lock-open',
+        },
       },
-    },
-    {
-      title: 'regex',
-      shortTitle: 'regex',
-      path: '/text/regex',
-      icon: {
-        name: 'rename',
+    ],
+  },
+  text: {
+    key: 'text',
+    icon: { name: 'text' },
+    children: [
+      {
+        title: 'inspector',
+        shortTitle: 'inspector',
+        path: '/text/inspector',
+        icon: {
+          name: 'font',
+        },
       },
-    },
-    {
-      title: 'diff',
-      shortTitle: 'diff',
-      path: '/text/diff',
-      icon: {
-        name: 'git-compare',
+      {
+        title: 'regex',
+        shortTitle: 'regex',
+        path: '/text/regex',
+        icon: {
+          name: 'rename',
+        },
       },
-    },
-    {
-      title: 'hyphenation',
-      shortTitle: 'hyphenation',
-      path: '/text/hyphenation',
-      icon: {
-        name: 'stats',
+      {
+        title: 'diff',
+        shortTitle: 'diff',
+        path: '/text/diff',
+        icon: {
+          name: 'git-compare',
+        },
       },
-    },
-  ],
-  graphic: [
-    {
-      title: 'compressor',
-      shortTitle: 'compressor',
-      path: '/graphic/compressor',
-      icon: {
-        name: 'component',
-        type: 'solid',
+      {
+        title: 'hyphenation',
+        shortTitle: 'hyphenation',
+        path: '/text/hyphenation',
+        icon: {
+          name: 'stats',
+        },
       },
-    },
-    {
-      title: 'imageConverter',
-      shortTitle: 'imageConverter',
-      path: '/graphic/image-converter',
-      icon: {
-        name: 'image',
+    ],
+  },
+  graphic: {
+    key: 'graphic',
+    icon: { name: 'images' },
+    children: [
+      {
+        title: 'compressor',
+        shortTitle: 'compressor',
+        path: '/graphic/compressor',
+        icon: {
+          name: 'component',
+          type: 'solid',
+        },
       },
-    },
-    {
-      title: 'blindessSimulator',
-      shortTitle: 'blindessSimulator',
-      path: '/graphic/blindess-simulator',
-      icon: {
-        name: 'low-vision',
+      {
+        title: 'imageConverter',
+        shortTitle: 'imageConverter',
+        path: '/graphic/image-converter',
+        icon: {
+          name: 'image',
+        },
       },
-    },
-    {
-      title: 'colorPicker',
-      shortTitle: 'colorPicker',
-      path: '/graphic/color-picker',
-      icon: {
-        name: 'palette',
-        type: 'solid',
+      {
+        title: 'blindessSimulator',
+        shortTitle: 'blindessSimulator',
+        path: '/graphic/blindess-simulator',
+        icon: {
+          name: 'low-vision',
+        },
       },
-    },
-  ],
+      {
+        title: 'colorPicker',
+        shortTitle: 'colorPicker',
+        path: '/graphic/color-picker',
+        icon: {
+          name: 'palette',
+          type: 'solid',
+        },
+      },
+    ],
+  },
 };
 
 export const getStaticRoutes = () => {
   console.log('😡 caluculate static routes');
-  return ROUTES_ORDER.map((key) => ROUTES[key]).flat();
+  return ROUTES_ORDER.map((key) => ROUTES[key].children).flat();
 };

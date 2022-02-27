@@ -9,19 +9,23 @@ import {
   Spacer,
   Grid,
   Card,
+  Collapse,
+  useTheme,
 } from '@nextui-org/react';
 import { useTranslation } from 'next-i18next';
+import { map } from 'lodash';
 import BoxIcon from '@/components/BoxIcon';
 import { getStaticPaths, makeStaticProps } from '@/libs/getStatic';
 import type { I18nProps } from '@/types';
 
-import { getStaticRoutes } from '../../routes';
+import { getStaticRoutes, RouteObject, ROUTES } from '../../routes';
 import { sideBarWidth } from '../../theme';
 
 interface HomeProps extends I18nProps {}
 
 const Home: NextPage<HomeProps> = (props) => {
   const router = useRouter();
+  const { theme } = useTheme();
   const { t } = useTranslation('common');
   const routes = getStaticRoutes();
   const lang = props._nextI18Next.initialLocale;
@@ -40,9 +44,7 @@ const Home: NextPage<HomeProps> = (props) => {
             overflowY: 'auto',
           }}
         >
-          <Container
-            css={{ display: 'flex', height: 'inherit' }}
-          >
+          <Container css={{ display: 'flex', height: 'inherit' }}>
             <Row css={{ flexDirection: 'column' }}>
               <Input
                 bordered
@@ -52,32 +54,52 @@ const Home: NextPage<HomeProps> = (props) => {
                 color="default"
               />
               <Spacer />
-              <Text>
-                <BoxIcon name="home" /> {t('home')}
+              <Text h5>
+                <BoxIcon
+                  name="home"
+                  style={{ marginRight: theme?.space.xs.value }}
+                />{' '}
+                {t('home')}
               </Text>
-              <Spacer y={0.2} />
-              <Text>
-                <BoxIcon name="sync" /> {t('converter', { count: 0 })}
-              </Text>
-              <Text>
-                <BoxIcon name="dna" /> {t('encoders')} / {t('decoders')}
-              </Text>
-              <Text>
-                <BoxIcon name="align-left" /> {t('formatters')}
-              </Text>
-              <Text>
-                <BoxIcon name="magic-wand" type="solid" /> {t('generators')}
-              </Text>
-              <Text>
-                <BoxIcon name="text" /> {t('text')}
-              </Text>
-              <Text>
-                <BoxIcon name="images" /> {t('graphic')}
-              </Text>
+              <Spacer y={0.3} />
+              <Collapse.Group divider={false} css={{ width: '100%', p: 0 }}>
+                {map(ROUTES, (route: RouteObject) => {
+                  return (
+                    <Collapse
+                      key={route.key}
+                      title={<Text h5>{t(route.key)}</Text>}
+                      contentLeft={
+                        <BoxIcon
+                          name={route.icon.name}
+                          type={route.icon?.type}
+                        />
+                      }
+                      css={{
+                        '> div': {
+                          pt: 2,
+                          pb: 2,
+                        },
+                      }}
+                    >
+                      {route.children.map((child) => {
+                        return (
+                          <Text size="$xs" key={child.path}>
+                            {t(child.shortTitle)}
+                          </Text>
+                        );
+                      })}
+                    </Collapse>
+                  );
+                })}
+              </Collapse.Group>
             </Row>
             <Row css={{ mt: 'auto', pb: 2 }}>
-              <Text>
-                <BoxIcon name="cog" /> {t('settings')}
+              <Text h5>
+                <BoxIcon
+                  name="cog"
+                  style={{ marginRight: theme?.space.xs.value }}
+                />{' '}
+                {t('settings')}
               </Text>
             </Row>
           </Container>
@@ -97,7 +119,7 @@ const Home: NextPage<HomeProps> = (props) => {
             <Spacer />
             <Row>
               <Grid.Container gap={1}>
-                {routes.map((route, i) => {
+                {map(routes, (route, i) => {
                   return (
                     <Grid xs={6} sm={3} key={i}>
                       <Card
@@ -124,9 +146,7 @@ const Home: NextPage<HomeProps> = (props) => {
                                 pb: 25,
                                 bg: '$accents2',
                                 borderRadius: 7,
-                                verticalAlign: 'middle',
                                 textAlign: 'center',
-                                lineHeight: '100%',
                               }}
                             >
                               <BoxIcon
