@@ -1,29 +1,4 @@
-import {
-  VscNote,
-  VscCalendar,
-  VscCode,
-  VscLink,
-  VscPackage,
-  VscFileZip,
-  VscSymbolNumeric,
-  VscRegex,
-  VscFold,
-  VscJson,
-  VscSquirrel,
-  VscArrowRight,
-  VscStarEmpty,
-  VscReferences,
-  VscSaveAs,
-  VscLock,
-  VscUnlock,
-  VscCaseSensitive,
-  VscDiff,
-  VscDiffRemoved,
-  VscSymbolColor,
-  VscFileMedia,
-  VscBrowser,
-  VscSymbolMisc,
-} from 'react-icons/vsc';
+import { BoxIconProps } from "./components/BoxIcon";
 
 export const ROUTES_ORDER = [
   'converters',
@@ -35,25 +10,40 @@ export const ROUTES_ORDER = [
   'encryptors',
 ] as const;
 
-export const ROUTES = {
+export type RouteGroup = typeof ROUTES_ORDER[number];
+export interface Route {
+  title: string;
+  shortTitle: string;
+  path: string;
+  icon: Pick<BoxIconProps, 'name' | 'type'>;
+}
+export type Routes = Record<RouteGroup, Route[]>;
+
+export const ROUTES: Routes = {
   converters: [
     {
       title: 'jsonToYaml',
       shortTitle: 'jsonToYaml',
       path: '/converters/json-to-yaml',
-      icon: VscNote,
+      icon: {
+        name: 'transfer-alt',
+      },
     },
     {
       title: 'numberBase',
       shortTitle: 'numberBase',
       path: '/converters/number-base',
-      icon: VscSymbolNumeric,
+      icon: {
+        name: 'math',
+      },
     },
     {
       title: 'Date',
       shortTitle: 'Date',
       path: '/converters/Date',
-      icon: VscCalendar,
+      icon: {
+        name: 'calendar',
+      },
     },
   ],
   encoders: [
@@ -61,31 +51,42 @@ export const ROUTES = {
       title: 'html',
       shortTitle: 'html',
       path: '/encoders/html',
-      icon: VscCode,
+      icon: {
+        name: 'code-alt',
+      },
     },
     {
       title: 'url',
       shortTitle: 'url',
       path: '/encoders/url',
-      icon: VscLink,
+      icon: {
+        name: 'link',
+      },
     },
     {
       title: 'base64',
       shortTitle: 'base64',
       path: '/encoders/base64',
-      icon: VscPackage,
+      icon: {
+        name: 'package',
+      },
     },
     {
       title: 'gzip',
       shortTitle: 'gzip',
       path: '/encoders/gzip',
-      icon: VscFileZip,
+      icon: {
+        name: 'file-archive',
+        type: 'solid',
+      },
     },
     {
       title: 'jwt',
       shortTitle: 'jwt',
       path: '/encoders/jwt',
-      icon: VscFold,
+      icon: {
+        name: 'code-curly',
+      },
     },
   ],
   formatters: [
@@ -93,19 +94,26 @@ export const ROUTES = {
       title: 'json',
       shortTitle: 'json',
       path: '/formatters/json',
-      icon: VscJson,
+      icon: {
+        name: 'file-json',
+        type: 'solid',
+      },
     },
     {
       title: 'sql',
       shortTitle: 'sql',
       path: '/formatters/sql',
-      icon: VscSquirrel,
+      icon: {
+        name: 'data',
+      },
     },
     {
       title: 'xml',
       shortTitle: 'xml',
       path: '/formatters/xml',
-      icon: VscCode,
+      icon: {
+        name: 'code-alt',
+      },
     },
   ],
   generators: [
@@ -113,25 +121,34 @@ export const ROUTES = {
       title: 'hash',
       shortTitle: 'hash',
       path: '/generators/hash',
-      icon: VscArrowRight,
+      icon: {
+        name: 'hash',
+      },
     },
     {
       title: 'uuid',
       shortTitle: 'uuid',
       path: '/generators/uuid',
-      icon: VscStarEmpty,
+      icon: {
+        name: 'id-card',
+      },
     },
     {
       title: 'lorem',
       shortTitle: 'lorem',
       path: '/generators/lorem',
-      icon: VscReferences,
+      icon: {
+        name: 'paragraph',
+      },
     },
     {
       title: 'checksum',
       shortTitle: 'checksum',
       path: '/generators/checksum',
-      icon: VscSaveAs,
+      icon: {
+        name: 'file-export',
+        type: 'solid',
+      },
     },
   ],
   encryptors: [
@@ -139,13 +156,17 @@ export const ROUTES = {
       title: 'aes',
       shortTitle: 'aes',
       path: '/encryptors/aes',
-      icon: VscLock,
+      icon: {
+        name: 'lock',
+      },
     },
     {
       title: 'des',
       shortTitle: 'des',
       path: '/encryptors/des',
-      icon: VscUnlock,
+      icon: {
+        name: 'lock-open',
+      },
     },
   ],
   text: [
@@ -153,25 +174,33 @@ export const ROUTES = {
       title: 'inspector',
       shortTitle: 'inspector',
       path: '/text/inspector',
-      icon: VscCaseSensitive,
+      icon: {
+        name: 'font',
+      },
     },
     {
       title: 'regex',
       shortTitle: 'regex',
       path: '/text/regex',
-      icon: VscRegex,
+      icon: {
+        name: 'rename',
+      },
     },
     {
       title: 'diff',
       shortTitle: 'diff',
       path: '/text/diff',
-      icon: VscDiff,
+      icon: {
+        name: 'git-compare',
+      },
     },
     {
       title: 'hyphenation',
       shortTitle: 'hyphenation',
       path: '/text/hyphenation',
-      icon: VscDiffRemoved,
+      icon: {
+        name: 'stats',
+      },
     },
   ],
   graphic: [
@@ -179,28 +208,38 @@ export const ROUTES = {
       title: 'compressor',
       shortTitle: 'compressor',
       path: '/graphic/compressor',
-      icon: VscSymbolMisc,
+      icon: {
+        name: 'component',
+        type: 'solid',
+      },
     },
     {
       title: 'imageConverter',
       shortTitle: 'imageConverter',
       path: '/graphic/image-converter',
-      icon: VscFileMedia,
+      icon: {
+        name: 'image',
+      },
     },
     {
       title: 'blindessSimulator',
       shortTitle: 'blindessSimulator',
       path: '/graphic/blindess-simulator',
-      icon: VscBrowser,
+      icon: {
+        name: 'low-vision',
+      },
     },
     {
       title: 'colorPicker',
       shortTitle: 'colorPicker',
       path: '/graphic/color-picker',
-      icon: VscSymbolColor,
+      icon: {
+        name: 'palette',
+        type: 'solid',
+      },
     },
   ],
-} as const;
+};
 
 export const getStaticRoutes = () => {
   console.log('😡 caluculate static routes');
