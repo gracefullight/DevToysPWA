@@ -16,6 +16,7 @@ import { getStaticPaths, makeStaticProps } from '@/libs/getStatic';
 import type { I18nProps } from '@/types';
 
 import { getStaticRoutes } from '../../routes';
+import { sideBarWidth } from '../../theme';
 
 interface HomeProps extends I18nProps {}
 
@@ -26,48 +27,62 @@ const Home: NextPage<HomeProps> = (props) => {
   const lang = props._nextI18Next.initialLocale;
 
   return (
-    <Container fluid gap={1}>
+    <Container gap={1}>
       <Row>
-        <Col span={4}>
+        <Col
+          span={4}
+          id="aside"
+          css={{
+            position: 'fixed',
+            width: sideBarWidth,
+            height: '100%',
+            p: 10,
+            overflowY: 'auto',
+          }}
+        >
           <Container
-            direction="row"
-            css={{ position: 'fixed', height: '100%', paddingTop: '5px' }}
+            css={{ display: 'flex', height: '100%' }}
           >
-            <Input
-              bordered
-              animated={false}
-              size="sm"
-              placeholder={t('typeToSearch')}
-              color="default"
-            />
-            <Spacer />
-            <Text>
-              <BoxIcon name="home" /> {t('home')}
-            </Text>
-            <Spacer y={0.2} />
-            <Text>
-              <BoxIcon name="transfer-alt" /> {t('converter', { count: 0 })}
-            </Text>
-            <Text>
-              <BoxIcon name="dna" /> {t('encoders')} / {t('decoders')}
-            </Text>
-            <Text>
-              <BoxIcon name="align-left" /> {t('formatters')}
-            </Text>
-            <Text>
-              <BoxIcon name="magic-wand" type="solid" /> {t('generators')}
-            </Text>
-            <Text>
-              <BoxIcon name="text" />
-              {t('text')}
-            </Text>
-            <Text>
-              <BoxIcon name="images" /> {t('graphic')}
-            </Text>
+            <Row css={{ flexDirection: 'column' }}>
+              <Input
+                bordered
+                animated={false}
+                size="sm"
+                placeholder={t('typeToSearch')}
+                color="default"
+              />
+              <Spacer />
+              <Text>
+                <BoxIcon name="home" /> {t('home')}
+              </Text>
+              <Spacer y={0.2} />
+              <Text>
+                <BoxIcon name="transfer-alt" /> {t('converter', { count: 0 })}
+              </Text>
+              <Text>
+                <BoxIcon name="dna" /> {t('encoders')} / {t('decoders')}
+              </Text>
+              <Text>
+                <BoxIcon name="align-left" /> {t('formatters')}
+              </Text>
+              <Text>
+                <BoxIcon name="magic-wand" type="solid" /> {t('generators')}
+              </Text>
+              <Text>
+                <BoxIcon name="text" />
+                {t('text')}
+              </Text>
+              <Text>
+                <BoxIcon name="images" /> {t('graphic')}
+              </Text>
+            </Row>
+            <Row css={{ mt: 'auto', pb: 2 }}>
+              <Text>Settings</Text>
+            </Row>
           </Container>
         </Col>
-        <Col>
-          <Container as="main">
+        <Col id="main" css={{ ml: sideBarWidth }}>
+          <Container>
             <Row
               css={{
                 position: 'sticky',

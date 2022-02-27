@@ -31,3 +31,5 @@ export const darkTheme = createTheme({
     },
   },
 });
+
+export const sideBarWidth = 240;
