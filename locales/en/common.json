@@ -8,5 +8,6 @@
   "generators": "Generators",
   "text": "Text",
   "graphic": "Graphic",
-  "typeToSearch": "Type to search for tools..."
+  "typeToSearch": "Type to search for tools...",
+  "settings": "Settings"
 }
