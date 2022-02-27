@@ -5,6 +5,7 @@
   "decoders": "디코더",
   "formatters": "포매터",
   "generators": "제네레이터",
+  "encryptors": "암호화",
   "text": "텍스트",
   "graphic": "그래픽",
   "typeToSearch": "검색할 도구를 입력해주세요.",
