@@ -5,6 +5,7 @@
   "decoders": "Decoders",
   "formatters": "Formatters",
   "generators": "Generators",
+  "encryptors": "Encryptors",
   "text": "Text",
   "graphic": "Graphic",
   "typeToSearch": "Type to search for tools...",
