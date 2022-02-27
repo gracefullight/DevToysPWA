@@ -92,28 +92,42 @@ const Home: NextPage<HomeProps> = (props) => {
                           cursor: 'pointer',
                         }}
                       >
-                        <Card.Header
-                          css={{
-                            position: 'absolute',
-                            zIndex: 1,
-                            top: 5,
-                            left: 1,
-                          }}
-                        >
-                          <Text h5>{t(route.title)}</Text>
-                        </Card.Header>
-                        <Card.Body css={{ p: 0 }}>
-                          <Card.Image
-                            src="https://picsum.photos/200/300"
-                            width="100%"
-                            height={200}
-                          />
-                          {/* <Avatar squared /> */}
+                        <Card.Body>
+                          <Row
+                            css={{
+                              pt: 20,
+                              justifyContent: 'center',
+                              alignItems: 'center',
+                            }}
+                          >
+                            <Col
+                              css={{
+                                w: 100,
+                                h: '100%',
+                                pt: 25,
+                                pb: 25,
+                                bg: '$accents2',
+                                borderRadius: 7,
+                                verticalAlign: 'middle',
+                                textAlign: 'center',
+                                lineHeight: '100%',
+                              }}
+                            >
+                              <BoxIcon
+                                name={route.icon.name}
+                                type={route.icon?.type}
+                                size="md"
+                              />
+                            </Col>
+                          </Row>
                         </Card.Body>
                         <Card.Footer>
-                          <Text small>
-                            {t(`${route.shortTitle}.description`)}
-                          </Text>
+                          <Row css={{ flexDirection: 'column' }}>
+                            <Text b>{t(route.title)}</Text>
+                            <Text small>
+                              {t(`${route.shortTitle}.description`)}
+                            </Text>
+                          </Row>
                         </Card.Footer>
                       </Card>
                     </Grid>
