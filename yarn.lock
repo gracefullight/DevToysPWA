@@ -1468,6 +1468,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:^4.14.179":
+  version: 4.14.179
+  resolution: "@types/lodash@npm:4.14.179"
+  checksum: 71faa0c8071732c2b7f0bd092850d3cea96fc7912055d57d819cf2ab399a64150e4190d8a4ea35a0905662ddc118be9d2abd55891d8047c085acf98608156149
+  languageName: node
+  linkType: hard
+
 "@types/minimist@npm:^1.2.0":
   version: 1.2.2
   resolution: "@types/minimist@npm:1.2.2"
@@ -2990,6 +2997,7 @@ __metadata:
     "@testing-library/user-event": ^13.5.0
     "@types/jest": ^27.4.1
     "@types/js-yaml": ^4.0.5
+    "@types/lodash": ^4.14.179
     "@types/node": ^16.11.26
     "@types/prop-types": ^15.7.4
     "@types/react": ^17.0.39
@@ -3003,6 +3011,7 @@ __metadata:
     jest: ^27.5.1
     js-yaml: ^4.1.0
     lint-staged: ^12.3.4
+    lodash: ^4.17.21
     luxon: ^2.3.1
     next: ^12.1.0
     next-i18next: ^10.4.0
@@ -5457,7 +5466,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.7.0":
+"lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.21, lodash@npm:^4.7.0":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
