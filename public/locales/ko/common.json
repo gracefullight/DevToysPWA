@@ -8,5 +8,6 @@
   "generators": "제네레이터",
   "text": "텍스트",
   "graphic": "그래픽",
-  "typeToSearch": "검색할 도구를 입력해주세요."
+  "typeToSearch": "검색할 도구를 입력해주세요.",
+  "settings": "설정"
 }

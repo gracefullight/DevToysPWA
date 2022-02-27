@@ -57,7 +57,7 @@ const Home: NextPage<HomeProps> = (props) => {
               </Text>
               <Spacer y={0.2} />
               <Text>
-                <BoxIcon name="transfer-alt" /> {t('converter', { count: 0 })}
+                <BoxIcon name="sync" /> {t('converter', { count: 0 })}
               </Text>
               <Text>
                 <BoxIcon name="dna" /> {t('encoders')} / {t('decoders')}
@@ -69,15 +69,16 @@ const Home: NextPage<HomeProps> = (props) => {
                 <BoxIcon name="magic-wand" type="solid" /> {t('generators')}
               </Text>
               <Text>
-                <BoxIcon name="text" />
-                {t('text')}
+                <BoxIcon name="text" /> {t('text')}
               </Text>
               <Text>
                 <BoxIcon name="images" /> {t('graphic')}
               </Text>
             </Row>
             <Row css={{ mt: 'auto', pb: 2 }}>
-              <Text>Settings</Text>
+              <Text>
+                <BoxIcon name="cog" /> {t('settings')}
+              </Text>
             </Row>
           </Container>
         </Col>
