@@ -14,7 +14,7 @@
 - layout
   - [x] header
   - [ ] responsive layout
-  - [ ] collapse sidebar
+  - [x] collapse sidebar
   - [ ] search modal
   - [ ] 3way layout for contents
 - features
