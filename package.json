@@ -2,6 +2,10 @@
   "name": "devtoys-pwa",
   "version": "0.1.0",
   "author": "Gracefullight <gracefullight.dev@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gracefullight/DevToysPWA"
+  },
   "license": "MIT",
   "engines": {
     "node": "16"
