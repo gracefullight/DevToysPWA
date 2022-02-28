@@ -88,6 +88,7 @@ const Home: NextPage<HomeProps> = (props) => {
                           <NextLink
                             key={child.path}
                             href={`${lang}${child.path}`}
+                            passHref
                           >
                             <Text
                               css={{ pt: 0.5, pl: '$xs', cursor: 'pointer' }}
