@@ -5,6 +5,7 @@
   "theme_color": "#000000",
   "background_color": "#000000",
   "start_url": "/DevToysPWA",
+  "scope": "/DevToysPWA",
   "display": "standalone",
   "orientation": "portrait-primary",
   "icons": [
