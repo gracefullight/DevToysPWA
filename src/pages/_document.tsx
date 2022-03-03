@@ -20,7 +20,7 @@ class MyDocument extends Document {
     return (
       <Html lang={currentLocale}>
         <Head>
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="manifest" href="/DevToysPWA/manifest.json" />
           <link
             href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
             rel="stylesheet"
