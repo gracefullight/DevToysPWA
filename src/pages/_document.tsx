@@ -25,6 +25,11 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           {CssBaseline.flush()}
+          <script
+            async
+            src="https://cdn.jsdelivr.net/npm/pwacompat"
+            crossOrigin="anonymous"
+          ></script>
         </Head>
         <body>
           <Main />

@@ -1,3 +1,4 @@
+const withPWA = require('next-pwa');
 const urlPrefix = process.env.NODE_ENV === 'production' ? '/DevToysPWA' : '';
 
 /** @type {import('next').NextConfig} */
@@ -7,6 +8,9 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
+  pwa: {
+    dest: 'public',
+  },
 };
 
-module.exports = nextConfig;
+module.exports = withPWA(nextConfig);
