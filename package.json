@@ -22,7 +22,7 @@
     "prerelease": "standard-version --prerelease beta"
   },
   "dependencies": {
-    "@nextui-org/react": "^1.0.2-beta.4",
+    "@nextui-org/react": "^1.0.2-beta.5",
     "axios": "^0.26.1",
     "clsx": "^1.1.1",
     "js-yaml": "^4.1.0",
