@@ -1,6 +1,7 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { i18n } from 'next-i18next.config';
 import type { GetStaticPropsContext } from 'next';
+
+import { i18n } from 'next-i18next.config';
 
 export const getI18nPaths = () => {
   return i18n.locales.map((locale) => ({

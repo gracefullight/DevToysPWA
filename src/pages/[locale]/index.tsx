@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { useRouter } from 'next/router';
-import { Text, Row, Col, Grid, Card, useTheme } from '@nextui-org/react';
+import { Text, Row, Col, Grid, Card } from '@nextui-org/react';
 import { useTranslation } from 'next-i18next';
 import { map } from 'lodash';
 import BoxIcon from '@/components/BoxIcon';
@@ -25,8 +25,7 @@ const Home: NextPage<HomeProps> = (props) => {
           return (
             <Grid xs={6} sm={3} key={i}>
               <Card
-                hoverable
-                cover
+                isHoverable
                 onClick={() => router.push(`${lang}${route.path}`)}
                 css={{
                   cursor: 'pointer',
