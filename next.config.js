@@ -1,5 +1,5 @@
 const withPWA = require('next-pwa');
-const urlPrefix = process.env.NODE_ENV === 'production' ? '/DevToysPWA' : '';
+const urlPrefix = process.env.NODE_ENV === 'production' ? '/DevToysPWA' : undefined;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
