@@ -4079,9 +4079,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ahooks@npm:^3.6.2":
-  version: 3.6.2
-  resolution: "ahooks@npm:3.6.2"
+"ahooks@npm:^3.7.2":
+  version: 3.7.2
+  resolution: "ahooks@npm:3.7.2"
   dependencies:
     "@types/js-cookie": ^2.x.x
     ahooks-v3-count: ^1.0.0
@@ -4093,7 +4093,7 @@ __metadata:
     screenfull: ^5.0.0
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 09d4ad715960bbcb33126b4d1b34b47f26130c5714eb1b440d5cd17af84430532765065f865b0aefd14b2fd2dbd5eaaa961e64fd9d0726dacddb734459310691
+  checksum: 3be0c720a5afa869198b4400a9494f61585e737d77fb7a0d0fd1c88f4bacfaf976cb4d81ae4d266feeb40f621dbc3fb775bbb4e300bc4ab0022a1ec6ac9f4649
   languageName: node
   linkType: hard
 
@@ -5606,7 +5606,7 @@ __metadata:
     "@types/prop-types": ^15.7.5
     "@types/react": ^18.0.15
     "@types/react-dom": ^18.0.6
-    ahooks: ^3.6.2
+    ahooks: ^3.7.2
     axios: ^0.27.2
     clsx: ^1.2.1
     devmoji: ^2.3.0
