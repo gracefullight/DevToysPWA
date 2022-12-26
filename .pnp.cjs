@@ -49,7 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prop-types", "npm:15.7.5"],\
             ["@types/react", "npm:18.0.15"],\
             ["@types/react-dom", "npm:18.0.6"],\
-            ["ahooks", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:3.6.2"],\
+            ["ahooks", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:3.7.4"],\
             ["axios", "npm:0.27.2"],\
             ["clsx", "npm:1.2.1"],\
             ["devmoji", "npm:2.3.0"],\
@@ -6418,17 +6418,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["ahooks", [\
-        ["npm:3.6.2", {\
-          "packageLocation": "./.yarn/cache/ahooks-npm-3.6.2-3a2707807e-09d4ad7159.zip/node_modules/ahooks/",\
+        ["npm:3.7.4", {\
+          "packageLocation": "./.yarn/cache/ahooks-npm-3.7.4-30faa6882f-43d46823df.zip/node_modules/ahooks/",\
           "packageDependencies": [\
-            ["ahooks", "npm:3.6.2"]\
+            ["ahooks", "npm:3.7.4"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:3.6.2", {\
-          "packageLocation": "./.yarn/__virtual__/ahooks-virtual-52997a1727/0/cache/ahooks-npm-3.6.2-3a2707807e-09d4ad7159.zip/node_modules/ahooks/",\
+        ["virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:3.7.4", {\
+          "packageLocation": "./.yarn/__virtual__/ahooks-virtual-3e4c4adb47/0/cache/ahooks-npm-3.7.4-30faa6882f-43d46823df.zip/node_modules/ahooks/",\
           "packageDependencies": [\
-            ["ahooks", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:3.6.2"],\
+            ["ahooks", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:3.7.4"],\
             ["@types/js-cookie", "npm:2.2.7"],\
             ["@types/react", "npm:18.0.15"],\
             ["ahooks-v3-count", "npm:1.0.0"],\
@@ -6438,7 +6438,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.21"],\
             ["react", "npm:18.2.0"],\
             ["resize-observer-polyfill", "npm:1.5.1"],\
-            ["screenfull", "npm:5.2.0"]\
+            ["screenfull", "npm:5.2.0"],\
+            ["tslib", "npm:2.4.1"]\
           ],\
           "packagePeers": [\
             "@types/react",\
@@ -8316,7 +8317,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/prop-types", "npm:15.7.5"],\
             ["@types/react", "npm:18.0.15"],\
             ["@types/react-dom", "npm:18.0.6"],\
-            ["ahooks", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:3.6.2"],\
+            ["ahooks", "virtual:8f73b1be86834ff84d419fb5a72d15406f2904876e83c21469a48391bd71349bb28c0cf64266122483d9cb5b14ef7df37d94a7973e08364eb9f7435b0f56b3b4#npm:3.7.4"],\
             ["axios", "npm:0.27.2"],\
             ["clsx", "npm:1.2.1"],\
             ["devmoji", "npm:2.3.0"],\
@@ -14685,6 +14686,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tslib-npm-2.4.0-9cb6dc5030-8c4aa6a3c5.zip/node_modules/tslib/",\
           "packageDependencies": [\
             ["tslib", "npm:2.4.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.4.1", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-2.4.1-36f0ed04db-19480d6e03.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:2.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\

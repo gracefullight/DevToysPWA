@@ -4079,9 +4079,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ahooks@npm:^3.6.2":
-  version: 3.6.2
-  resolution: "ahooks@npm:3.6.2"
+"ahooks@npm:^3.7.4":
+  version: 3.7.4
+  resolution: "ahooks@npm:3.7.4"
   dependencies:
     "@types/js-cookie": ^2.x.x
     ahooks-v3-count: ^1.0.0
@@ -4091,9 +4091,10 @@ __metadata:
     lodash: ^4.17.21
     resize-observer-polyfill: ^1.5.1
     screenfull: ^5.0.0
+    tslib: ^2.4.1
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: 09d4ad715960bbcb33126b4d1b34b47f26130c5714eb1b440d5cd17af84430532765065f865b0aefd14b2fd2dbd5eaaa961e64fd9d0726dacddb734459310691
+  checksum: 43d46823df7f69f407fcef2f4a3016b3fffdc454c09d2d3ca30a5b88ad41cadf5c00e33873261791fef1a2d01a514b83f0ce8aaa104ec7cd3383ae4ab7812619
   languageName: node
   linkType: hard
 
@@ -5606,7 +5607,7 @@ __metadata:
     "@types/prop-types": ^15.7.5
     "@types/react": ^18.0.15
     "@types/react-dom": ^18.0.6
-    ahooks: ^3.6.2
+    ahooks: ^3.7.4
     axios: ^0.27.2
     clsx: ^1.2.1
     devmoji: ^2.3.0
@@ -11166,6 +11167,13 @@ __metadata:
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
   checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "tslib@npm:2.4.1"
+  checksum: 19480d6e0313292bd6505d4efe096a6b31c70e21cf08b5febf4da62e95c265c8f571f7b36fcc3d1a17e068032f59c269fab3459d6cd3ed6949eafecf64315fca
   languageName: node
   linkType: hard
 
